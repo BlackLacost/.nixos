@@ -30,8 +30,11 @@
   home.packages = with pkgs; [
     # here is some command line tools I use frequently
     # feel free to add your own or remove some of them
-    brave
+    google-chrome
     gh # github cli
+    vscode
+
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
 
     neofetch
     nnn # terminal file manager
@@ -162,4 +165,6 @@
 
   # Let home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  fonts.fontconfig.enable = true;
 }
